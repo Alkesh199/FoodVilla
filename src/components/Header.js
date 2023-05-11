@@ -2,7 +2,7 @@ import { useState,useContext } from "react";
 import Title from "./Title.js";
 import {Link} from "react-router-dom";
 import useOnline from "../utils/useOnline";
-import lines from "../assets/lines.png";
+import lines from "../assets/Lines.png";
 import NavLinks from "./NavLinks.js";
 import UserContext from "../utils/UserContext.js";
 import { useSelector } from "react-redux";
