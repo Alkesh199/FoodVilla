@@ -14,8 +14,8 @@ export const Footer = () =>{
     // const {user} = useContext(UserContext);
    
     return (
-        <div className="bg-black w-[100%]">
-        <div className="flex max-w-[1320px]  justify-center  items-start  text-white py-14 border-b-2 border-white lg:flex-nowrap flex-wrap mx-[10%] lg:mx-auto">
+        <div className="bg-black w-[100%] z-50">
+        <div className="flex max-w-[1320px]  justify-center  items-start  text-white py-14 border-b-2 border-white lg:flex-nowrap flex-wrap mx-[10%] lg:mx-auto lg:px-4">
            
             <div className="lg:w-[20%] w-[50%] mt-7">
                 <p className="text-gray-300 mb-7">Company</p>

@@ -26,8 +26,8 @@ const Header = () =>{
 
     return (
         <>
-        <div className="bg-black sticky top-0">
-        <div className='items-center justify-between  mb-3 max-w-[1320px] py-5 mx-auto lg:flex hidden'>
+        <div className="bg-black sticky top-0 z-50">
+        <div className='items-center justify-between  mb-3 max-w-[1320px] py-5 mx-auto lg:flex hidden px-4'>
            <Title />
            
             <ul className = "flex items-center justify-between w-[50%] pb-7 lg:pb-0">
@@ -48,7 +48,7 @@ const Header = () =>{
         </div>
 
 
-        <div className='lg:hidden sticky top-0 bg-black'>
+        <div className='lg:hidden sticky top-0 bg-black z-50'>
             <div className = "flex justify-between items-center px-5" >
                     <Title />
                     <Link to="cart"><li className="text-lg  text-white hover:text-orange-700 list-none">cart <span className="px-2 py-1 !text-red font-bold border border-red-700 rounded ">{cartS.count}</span></li></Link>
