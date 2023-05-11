@@ -3,8 +3,8 @@ import { useState } from "react";
 const ContactUs =()=>{
     const [name,setName] = useState("");
     const [email,setEmail]=useState("");
-    const [emailError,setEmailError]= useState(false);
-    const [nameError,setNameError] =useState(false);
+    const [emailError,setEmailError]= useState(true);
+    const [nameError,setNameError] =useState(true);
     
 
     const emailRegex = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
@@ -35,14 +35,17 @@ const ContactUs =()=>{
     
     const handleSubmitButton = (e) =>{
         e.preventDefault();
-        if(name.length>0 && email.length>0){
+        if(!nameError && !emailError){
         alert("Thanks for your submission, we will get back to you soon...");
-        }
-
-
         setTimeout(() => {
             window.location.href="/";
         }, 1000);
+        }
+        else{
+            alert("Please Fill Valid name or Email.");
+        }
+
+        
        
         
 
