@@ -10,6 +10,7 @@ const RestaurentMenu = ()=>{
     const param = useParams();
     const {id} = param;
    const resMenu = useRestaurent(id);
+   const outerMenu = resMenu?.cards[0]?.card?.card;
    const dispatch= useDispatch();
 
     const addFoodItem = (item) => {
@@ -27,17 +28,17 @@ const RestaurentMenu = ()=>{
 
         <div className="flex justify-between max-w-[900px] border-b border-dotted border-gray-400 lg:m-auto pb-10 mx-[15px]">
             <div className="">
-                <p className="text-lg font-bold text-gray-900 mb-2">{resMenu?.cards[0]?.card?.card?.info?.name}</p>
-                <p className="text-gray-500 text-sm">{resMenu?.cards[0]?.card?.card?.info?.areaName}</p>
-                <p className ="text-gray-500 text-sm mb-5">{resMenu?.cards[0]?.card?.card?.info?.feeDetails.message}</p>
+                <p className="text-lg font-bold text-gray-900 mb-2">{outerMenu?.info?.name}</p>
+                <p className="text-gray-500 text-sm">{outerMenu?.info?.areaName}</p>
+                <p className ="text-gray-500 text-sm mb-5">{outerMenu?.info?.feeDetails.message}</p>
             </div>
 
             <div className="flex items-center flex-col justify-evenly px-5 mb-4 border border-dotted rounded border-gray-400">
                <div className="rs-top">
-                  <p className = "rs-rating">{resMenu?.cards[0]?.card?.card?.info?.avgRating}</p>
+                  <p className = "rs-rating">{outerMenu?.info?.avgRating}</p>
                </div>
                <div className="border-t border-dotted pt-1 border-gray-400">
-                <p>{resMenu?.cards[0]?.card?.card?.info?.totalRatingsString}</p>
+                <p>{outerMenu?.info?.totalRatingsString}</p>
                </div>
             </div>
         </div>
