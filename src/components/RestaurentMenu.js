@@ -61,7 +61,7 @@ const RestaurentMenu = ()=>{
                                         <p className="text-slate-500 text-sm">{item?.description}</p>
                                     </div>
                                     <div className="w-[30%] flex flex-col items-center">
-                                       {innerItem?.card?.info?.imageId &&  <img src = {cloudnary_img_url+item?.imageId } className='w-[118px] h-[96px] object-cover rounded-md m-auto' ></img>}
+                                       {innerItem?.card?.info?.imageId &&  <img src = {cloudnary_img_url+item?.imageId } className='w-[118px] h-[96px] object-cover rounded-md m-auto' loading={"lazy"} ></img>}
                                        <button data-testid="" className="text-lime-700 font-semibold border rounded py-1 px-4 mt-[-20px] bg-white menu-btn" onClick={() => addFoodItem(item)}>ADD</button>
                                     </div>
                                     </div>

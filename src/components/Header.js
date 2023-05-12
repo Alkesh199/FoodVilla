@@ -59,7 +59,7 @@ const Header = () =>{
 
                     {isLoggedIn && <div className="flex flex-col items-center"><button onClick={logInHandler} className="text-black bg-white font-normal text-lg my-1 border-4 rounded-md  border-black w-24">logout</button><p className="text-white">{user.name}</p></div>}
                   </div>
-                  <img src ={lines} alt="menu image" className="max-h-8 max-w-8 lg:max-h-14 lg:max-w-14 rounded-[50%]" onClick={()=>setShowItems(!showItems)}></img>
+                  <img src ={lines} alt="menu image" loading={"lazy"} className="max-h-8 max-w-8 lg:max-h-14 lg:max-w-14 rounded-[50%]" onClick={()=>setShowItems(!showItems)}></img>
                     
            </div>
 

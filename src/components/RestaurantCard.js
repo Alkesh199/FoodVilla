@@ -5,7 +5,7 @@ const RestaurantCard = ({cloudinaryImageId,name,cuisines,avgRating,lastMileTrave
     return(
        <Link to={`/restaurants/${id}`}><div className='w-[260px] m-8  p-4 border border-black shadow-sm rounded lg:border-transparent lg:hover:border lg:hover:border-black lg:hover:shadow-sm lg:hover:rounded'>
             <div>
-                <img src={cloudnary_img_url+cloudinaryImageId}></img>
+                <img src={cloudnary_img_url+cloudinaryImageId} loading={"lazy"}></img>
             </div>
             <div className='mt-2'>
                 <p className="text-xl font-semibold">{name}</p>
