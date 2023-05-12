@@ -39,7 +39,7 @@ const Body = () =>{
     if(!isOnline){
         return(
             <div className="my-[20vh] mx-auto text-red-500 text-2xl max-w-[1320px] flex items-center">
-                <h1>please check your internet connection</h1>
+                <h1 className="m-auto text-center">please check your internet connection,it seems you are offline.</h1>
             </div>
             
         );

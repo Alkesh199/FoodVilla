@@ -26,7 +26,7 @@ const RestaurentMenu = ()=>{
         // </>
         <>
 
-        <div className="flex justify-between max-w-[900px] border-b border-dotted border-gray-400 lg:m-auto pb-10 mx-[15px]">
+        <div className="flex justify-between max-w-[900px] border-b border-dotted border-gray-400 lg:m-auto pb-10 mx-[15px] mt-3">
             <div className="">
                 <p className="text-lg font-bold text-gray-900 mb-2">{outerMenu?.info?.name}</p>
                 <p className="text-gray-500 text-sm">{outerMenu?.info?.areaName}</p>
@@ -63,7 +63,7 @@ const RestaurentMenu = ()=>{
                                     </div>
                                     <div className="w-[30%] flex flex-col items-center">
                                        {innerItem?.card?.info?.imageId &&  <img src = {cloudnary_img_url+item?.imageId } className='w-[118px] h-[96px] object-cover rounded-md m-auto' loading={"lazy"} ></img>}
-                                       <button  className="text-lime-700 font-semibold border rounded py-1 px-4 mt-[-20px] bg-white menu-btn" onClick={() => addFoodItem(item)}>ADD</button>
+                                       <button  className="text-lime-700 font-semibold border rounded py-1 px-4 mt-[-20px] bg-white menu-btn hover:bg-slate-300" onClick={() => addFoodItem(item)}>ADD</button>
                                     </div>
                                     </div>
                                 );
