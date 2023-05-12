@@ -40,20 +40,21 @@ const RestaurentMenu = ()=>{
                <div className="border-t border-dotted pt-1 border-gray-400">
                 <p>{outerMenu?.info?.totalRatingsString}</p>
                </div>
-            </div>
+            </div> 
         </div>
         <div className="mx-[15px]">
             <div  data-testid="menu">
         
-            {resMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.map((itemOuter)=>{
+            {resMenu?.cards[resMenu?.cards?.length-1]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.map((itemOuter)=>{
                 return(
                     
+                        
                         <div  key={Math.random()} >
+                            
                             {
                             itemOuter?.card?.card?.itemCards?.map((innerItem)=>{
                                 let item = innerItem?.card?.info;
                                 return (
-                                    // <li key={Math.random()}>{innerItem.card.info.name}</li>
                                     <div className="flex max-w-[900px] m-auto border-b border-dotted rounded py-10 border-gray-400" key={innerItem?.card?.info?.id}>
                                     <div className="w-[70%]">
                                         <p className="text-slate-900 font-bold text-lg">{item?.name}</p>
@@ -69,6 +70,7 @@ const RestaurentMenu = ()=>{
                             })
                             }
                         </div>
+                        
                 );
             })}
             </div>
